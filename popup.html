@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+    <link href="./output.css" rel="stylesheet">
+    <script src="popup.js" defer></script>
+</head>
+<body class="bg-gray-50 p-4 w-96">
+    <div class="text-center mb-4">
+        <h1 class="font-bold"><i class="fas fa-spell-check mr-2"></i> Corrige moi ça !</h1>
+    </div>
+    <div id="mainContent" class="flex flex-col items-center">
+        <textarea id="textInput" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-5" placeholder="Entrez votre texte ici" rows="5"></textarea>
+        <div class="flex justify-around w-full mb-4">
+            <button id="correctButton" class="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded-full">
+                <i class="fas fa-spell-check mr-2"></i> Corriger
+            </button>
+            <button id="refomulateButton" class="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded-full">
+                <i class="fas fa-redo mr-2"></i> Reformuler
+            </button>
+        </div>
+        <p id="infoText" class="mb-2"></p>
+        <div id="correctedText" class="bg-white w-full p-4 font-bold rounded-lg border border-gray-400 shadow">
+            Le texte corrigé apparaîtra ici
+        </div>
+        <button id="copyButton" class="bg-green-500 hover:bg-green-700 font-bold py-2 px-4 rounded-full mt-4">
+            <i class="fas fa-copy mr-2"></i> Copier
+        </button>
+        <p id="copyText" class="text-green-700">Le texte corrigé a été copié dans le presse-papier</p>
+    </div>
+    <div class="text-center">
+    <button id="settingsButton" class="mt-4 text-gray-600">
+        <i class="fas fa-cog"></i>
+    </button>
+    </div>
+    <div id="settingsDiv" class="mt-4" style="display: none;">
+        <input type="text" id="apiKeyInput" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 mb-2" placeholder="Entrez votre clé API">
+        <button id="saveApiKeyButton" class="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded-full">Sauvegarder</button>
+    </div>
+    <p id="author" class="mt-4 text-gray-600 text-sm text-center">Par <a href="https://www.github.com/Anthony14FR" target="_blank" class="text-blue-700">TP <i class="fab fa-github"></i></a></p>
+</body>
+</html>
